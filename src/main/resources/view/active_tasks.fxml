@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="433.0" prefWidth="551.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.active_tasks.ActiveTaskFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2ecc71" height="85.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="570.0" />
+      <Label layoutX="159.0" layoutY="4.0" prefHeight="59.0" prefWidth="279.0" text="Active Tasks">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtId" focusColor="WHITE" layoutX="11.0" layoutY="128.0" prefHeight="26.0" prefWidth="68.0" promptText="id" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtDesc" layoutX="88.0" layoutY="130.0" promptText="description" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtTitle" layoutX="231.0" layoutY="130.0" prefHeight="26.0" prefWidth="142.0" promptText="title" style="-fx-background-color: white;" />
+      <TableView fx:id="tblActiveTasks" layoutY="243.0" prefHeight="190.0" prefWidth="569.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="86.39999085664749" text="Id" />
+          <TableColumn fx:id="colTitle" prefWidth="135.20001220703125" text="Title" />
+            <TableColumn fx:id="colDesc" prefWidth="209.6000518798828" text="Description" />
+            <TableColumn fx:id="colDate" prefWidth="137.5999755859375" text="Date" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="302.0" layoutY="191.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #e74c3c;" text="Add" textFill="WHITE" />
+      <JFXButton layoutX="361.0" layoutY="191.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #e74c3c;" text="Done" textFill="WHITE" />
+      <JFXCheckBox fx:id="checkbox" checkedColor="BLACK" layoutX="213.0" layoutY="195.0" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXButton layoutX="428.0" layoutY="191.0" onAction="#btnCompletedOnAction" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #e74c3c;" text="Completed Task Table" textFill="WHITE" />
+      <DatePicker fx:id="datePiker" layoutX="388.0" layoutY="130.0" promptText="Date" />
+   </children>
+</AnchorPane>

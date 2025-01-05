@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="433.0" prefWidth="570.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.completed_tasks.CompletedTaskFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2ecc71" height="79.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="570.0" />
+      <Label layoutX="94.0" layoutY="4.0" text="Completed Tasks">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCompletedTasks" layoutY="128.0" prefHeight="250.0" prefWidth="570.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="86.39999085664749" text="Id" />
+            <TableColumn fx:id="colTitle" prefWidth="135.20001220703125" text="Title" />
+            <TableColumn fx:id="colDesc" prefWidth="209.6000518798828" text="Description" />
+            <TableColumn fx:id="colDate" prefWidth="137.5999755859375" text="Date" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="428.0" layoutY="392.0" onAction="#btnReloadOnAction" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #e74c3c;" text="Reload" textFill="WHITE" />
+   </children>
+</AnchorPane>
